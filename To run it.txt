@@ -1,0 +1,14 @@
+# 1. Install
+cd workbridge/backend && npm install
+cd ../frontend && npm install
+
+# 2. Configure
+cp backend/.env.example backend/.env
+# Set MONGO_URI and JWT_SECRET in .env
+
+# 3. Seed DB
+cd backend && npm run seed
+
+# 4. Run both
+cd backend  && npm run dev   # → localhost:5000
+cd frontend && npm start     # → localhost:3000
